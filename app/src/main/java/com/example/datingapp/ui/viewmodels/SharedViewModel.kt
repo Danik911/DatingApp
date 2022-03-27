@@ -20,7 +20,7 @@ class SharedViewModel @Inject constructor(
 
     init {
         viewModelScope.launch {
-            delay(30000)
+            delay(3000)
             _isLoading.value = false
         }
     }
