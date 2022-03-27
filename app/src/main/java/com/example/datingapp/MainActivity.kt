@@ -4,7 +4,11 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.activity.viewModels
 import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
+import androidx.navigation.findNavController
+import androidx.navigation.ui.setupWithNavController
 import com.example.datingapp.ui.viewmodels.SharedViewModel
+import com.google.android.material.bottomnavigation.BottomNavigationItemView
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import dagger.hilt.android.AndroidEntryPoint
 import javax.inject.Inject
 
@@ -25,6 +29,10 @@ class MainActivity : AppCompatActivity() {
         splashScreen.setKeepOnScreenCondition {
             sharedViewModel.isLoading.value
         }
+        val bottomNavigation = findViewById<BottomNavigationView>(R.id.bottomNavigationView)
+        val navController = findNavController(R.id.fragmentContainerView)
+
+        bottomNavigation.setupWithNavController(navController)
     }
 
 
