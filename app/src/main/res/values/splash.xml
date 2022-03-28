@@ -3,7 +3,6 @@
     <style name="Theme.App.Splash" parent="Theme.SplashScreen">
         <item name="windowSplashScreenBackground">#fae1dd</item>
 
-        <item name="windowSplashScreenAnimatedIcon">@drawable/chat_img</item>
 
         <item name="postSplashScreenTheme">@style/Theme.DatingApp</item>
     </style>
