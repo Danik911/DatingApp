@@ -15,13 +15,13 @@ class SharedViewModel @Inject constructor(
     application: Application,
 ) : AndroidViewModel(application) {
 
-    private val _isLoading = MutableStateFlow(true)
+    private val _isLoading = MutableStateFlow(false)
     val isLoading = _isLoading.asStateFlow()
 
     init {
-        viewModelScope.launch {
+      /*  viewModelScope.launch {
             delay(1000)
             _isLoading.value = false
-        }
+        }*/
     }
 }
