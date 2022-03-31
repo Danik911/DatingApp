@@ -15,5 +15,7 @@
         <!--Font-->
         <item name="fontFamily">@font/jacques_francois</item>
         <item name="android:fontFamily">@font/jacques_francois</item>
+
+        <item name="bottomNavigationStyle">@style/BottomNavigationViewStyle</item>
     </style>
 </resources>
