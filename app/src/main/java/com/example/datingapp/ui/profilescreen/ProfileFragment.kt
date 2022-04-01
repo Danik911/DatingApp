@@ -2,20 +2,20 @@ package com.example.datingapp.ui.profilescreen
 
 import android.app.Activity
 import android.content.Intent
-import android.graphics.Bitmap
 import android.graphics.BitmapFactory
+import android.net.Uri
 import android.os.Bundle
 import android.os.Environment
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.FileProvider
 import androidx.fragment.app.Fragment
 import com.example.datingapp.databinding.FragmentProfileBinding
+import com.example.datingapp.util.Constants.CAMERA_REQUEST_CODE
 import com.example.datingapp.util.Constants.FILE_NAME
-import com.example.datingapp.util.Constants.REQUEST_CODE
+import com.example.datingapp.util.Constants.GALLERY_REQUEST_CODE
 import dagger.hilt.android.AndroidEntryPoint
 import java.io.File
 
@@ -39,15 +39,10 @@ class ProfileFragment : Fragment() {
 
         binding.cameraImageView.setOnClickListener {
 
-            val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
-            photoFile = getPhotoFile(FILE_NAME)
+            CustomDialog(requireContext()).show()
+            /*openGalleryToUploadImages()
+            takePhoto()*/
 
-            // This DOESN'T work for API >= 24 (starting 2016)
-            // takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, photoFile)
-
-            val fileProvider = FileProvider.getUriForFile(requireContext(), "com.example.datingapp.fileprovider", photoFile)
-            takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider)
-            startActivityForResult(takePictureIntent, REQUEST_CODE)
         }
 
         return binding.root
@@ -55,18 +50,59 @@ class ProfileFragment : Fragment() {
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+        if (requestCode == CAMERA_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
             //val takenImage = data?.extras?.get("data") as Bitmap
             val takenImage = BitmapFactory.decodeFile(photoFile.absolutePath)
             binding.profileImageView.setImageBitmap(takenImage)
         } else {
             super.onActivityResult(requestCode, resultCode, data)
         }
+/*        if (resultCode == Activity.RESULT_OK && requestCode == GALLERY_REQUEST_CODE) {
+
+            // if multiple images are selected
+            if (data?.getClipData() != null) {
+                var count = data.clipData?.itemCount
+
+                for (i in 0..count!!.minus(1)) {
+                    var imageUri: Uri = data.clipData?.getItemAt(i)?.uri ?: Uri.EMPTY
+                    //     iv_image.setImageURI(imageUri) Here you can assign your Image URI to the ImageViews
+                }
+
+            } else if (data?.getData() != null) {
+                // if single image is selected
+
+                var imageUri: Uri? = data.data
+                binding.profileImageView.setImageURI(imageUri)
+            }
+        }*/
     }
 
     private fun getPhotoFile(fileName: String): File {
         val storageDirectory = activity?.getExternalFilesDir(Environment.DIRECTORY_PICTURES)
         return File.createTempFile(fileName, ".jpg", storageDirectory)
+    }
+
+    private fun openGalleryToUploadImages() {
+        var intent = Intent(Intent.ACTION_OPEN_DOCUMENT)
+        intent.putExtra(Intent.EXTRA_ALLOW_MULTIPLE, true)
+        intent.addCategory(Intent.CATEGORY_OPENABLE)
+        intent.type = "image/*"
+        startActivityForResult(intent, GALLERY_REQUEST_CODE)
+    }
+
+    private fun takePhoto() {
+
+        val takePictureIntent = Intent(MediaStore.ACTION_IMAGE_CAPTURE)
+        photoFile = getPhotoFile(FILE_NAME)
+
+
+        val fileProvider = FileProvider.getUriForFile(
+            requireContext(),
+            "com.example.datingapp.fileprovider",
+            photoFile
+        )
+        takePictureIntent.putExtra(MediaStore.EXTRA_OUTPUT, fileProvider)
+        startActivityForResult(takePictureIntent, CAMERA_REQUEST_CODE)
     }
 
 
