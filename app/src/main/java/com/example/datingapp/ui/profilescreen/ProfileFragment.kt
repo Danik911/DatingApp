@@ -1,6 +1,7 @@
 package com.example.datingapp.ui.profilescreen
 
 import android.app.Activity
+import android.app.Dialog
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri
@@ -10,8 +11,12 @@ import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.appcompat.app.AlertDialog
 import androidx.core.content.FileProvider
+import androidx.databinding.DataBindingUtil
 import androidx.fragment.app.Fragment
+import com.example.datingapp.R
+import com.example.datingapp.databinding.CustomDialogBinding
 import com.example.datingapp.databinding.FragmentProfileBinding
 import com.example.datingapp.util.Constants.CAMERA_REQUEST_CODE
 import com.example.datingapp.util.Constants.FILE_NAME
@@ -38,43 +43,68 @@ class ProfileFragment : Fragment() {
         _binding = FragmentProfileBinding.inflate(layoutInflater, container, false)
 
         binding.cameraImageView.setOnClickListener {
-
-            CustomDialog(requireContext()).show()
-            /*openGalleryToUploadImages()
-            takePhoto()*/
-
-        }
+            showCustomDialog()
+         }
 
         return binding.root
     }
 
 
     override fun onActivityResult(requestCode: Int, resultCode: Int, data: Intent?) {
-        if (requestCode == CAMERA_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
-            //val takenImage = data?.extras?.get("data") as Bitmap
-            val takenImage = BitmapFactory.decodeFile(photoFile.absolutePath)
-            binding.profileImageView.setImageBitmap(takenImage)
-        } else {
-            super.onActivityResult(requestCode, resultCode, data)
-        }
-/*        if (resultCode == Activity.RESULT_OK && requestCode == GALLERY_REQUEST_CODE) {
+        /* if (requestCode == CAMERA_REQUEST_CODE && resultCode == Activity.RESULT_OK) {
+             //val takenImage = data?.extras?.get("data") as Bitmap
+             val takenImage = BitmapFactory.decodeFile(photoFile.absolutePath)
+             binding.profileImageView.setImageBitmap(takenImage)
+         } else {
+             super.onActivityResult(requestCode, resultCode, data)
+         }*/
+        /*  if (resultCode == Activity.RESULT_OK && requestCode == GALLERY_REQUEST_CODE) {
 
-            // if multiple images are selected
-            if (data?.getClipData() != null) {
-                var count = data.clipData?.itemCount
+              // if multiple images are selected
+              if (data?.getClipData() != null) {
+                  var count = data.clipData?.itemCount
 
-                for (i in 0..count!!.minus(1)) {
-                    var imageUri: Uri = data.clipData?.getItemAt(i)?.uri ?: Uri.EMPTY
-                    //     iv_image.setImageURI(imageUri) Here you can assign your Image URI to the ImageViews
+                  for (i in 0..count!!.minus(1)) {
+                      var imageUri: Uri = data.clipData?.getItemAt(i)?.uri ?: Uri.EMPTY
+                      //     iv_image.setImageURI(imageUri) Here you can assign your Image URI to the ImageViews
+                  }
+
+              } else if (data?.getData() != null) {
+                  // if single image is selected
+
+                  var imageUri: Uri? = data.data
+                  binding.profileImageView.setImageURI(imageUri)
+              }
+          }*/
+        when (requestCode) {
+            CAMERA_REQUEST_CODE -> {
+                if (resultCode == Activity.RESULT_OK) {
+                    val takenImage = BitmapFactory.decodeFile(photoFile.absolutePath)
+                    binding.profileImageView.setImageBitmap(takenImage)
+                } else {
+                    super.onActivityResult(requestCode, resultCode, data)
                 }
-
-            } else if (data?.getData() != null) {
-                // if single image is selected
-
-                var imageUri: Uri? = data.data
-                binding.profileImageView.setImageURI(imageUri)
             }
-        }*/
+            GALLERY_REQUEST_CODE -> {
+                if (resultCode == Activity.RESULT_OK) {
+                    // if multiple images are selected
+                    if (data?.getClipData() != null) {
+                        var count = data.clipData?.itemCount
+
+                        for (i in 0..count!!.minus(1)) {
+                            var imageUri: Uri = data.clipData?.getItemAt(i)?.uri ?: Uri.EMPTY
+                            //     iv_image.setImageURI(imageUri) Here you can assign your Image URI to the ImageViews
+                        }
+                    } else if (data?.getData() != null) {
+                        // if single image is selected
+
+                        var imageUri: Uri? = data.data
+                        binding.profileImageView.setImageURI(imageUri)
+                    }
+                }
+            }
+
+        }
     }
 
     private fun getPhotoFile(fileName: String): File {
@@ -105,9 +135,34 @@ class ProfileFragment : Fragment() {
         startActivityForResult(takePictureIntent, CAMERA_REQUEST_CODE)
     }
 
+    private fun showCustomDialog() {
+        val dialogBinding: CustomDialogBinding? =
+            DataBindingUtil.inflate(
+                LayoutInflater.from(requireContext()),
+                R.layout.custom_dialog,
+                null,
+                false
+            )
+
+        val customDialog = AlertDialog.Builder(requireContext(), 0).create()
+
+        customDialog.apply {
+            setView(dialogBinding?.root)
+            setCancelable(true)
+        }.show()
+
+        dialogBinding?.btnCamera?.setOnClickListener {
+            takePhoto()
+        }
+        dialogBinding?.btnGallery?.setOnClickListener {
+            openGalleryToUploadImages()
+        }
+    }
+
 
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
+
