@@ -1,7 +1,6 @@
-package com.example.datingapp.ui.profilescreen
+package com.example.datingapp.ui.screens.profilescreen
 
 import android.app.Activity
-import android.app.Dialog
 import android.content.Intent
 import android.graphics.BitmapFactory
 import android.net.Uri

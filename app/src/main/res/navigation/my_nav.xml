@@ -7,14 +7,18 @@
 
     <fragment
         android:id="@+id/questionsFragment"
-        android:name="com.example.datingapp.ui.questionnairescreen.QuestionnaireFragment"
+        android:name="com.example.datingapp.ui.screens.questionnairescreen.QuestionnaireFragment"
         android:label="fragment_questionnaire" />
     <fragment
         android:id="@+id/chatFragment"
-        android:name="com.example.datingapp.ui.chatscreen.ChatFragment"
+        android:name="com.example.datingapp.ui.screens.chatscreen.ChatFragment"
         android:label="fragment_chat" />
     <fragment
         android:id="@+id/profileFragment"
-        android:name="com.example.datingapp.ui.profilescreen.ProfileFragment"
+        android:name="com.example.datingapp.ui.screens.profilescreen.ProfileFragment"
         android:label="fragment_profile" />
+    <fragment
+        android:id="@+id/profileDetailFragment"
+        android:name="com.example.datingapp.ui.screens.profiledetailscreen.ProfileDetailFragment"
+        android:label="ProfileDetailFragment" />
 </navigation>

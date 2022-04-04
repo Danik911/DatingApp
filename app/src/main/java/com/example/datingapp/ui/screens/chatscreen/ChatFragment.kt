@@ -1,4 +1,4 @@
-package com.example.datingapp.ui.questionnairescreen
+package com.example.datingapp.ui.screens.chatscreen
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -6,9 +6,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import com.example.datingapp.R
-
-
-class QuestionnaireFragment : Fragment() {
+ class  ChatFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +14,7 @@ class QuestionnaireFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_questions, container, false)
+        return inflater.inflate(R.layout.fragment_chat, container, false)
     }
 
 

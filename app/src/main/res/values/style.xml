@@ -15,4 +15,12 @@
         <item name="itemTextColor">@color/bottom_nav_icon_color_selector</item>
         <item name="itemIconTint">@color/bottom_nav_icon_color_selector</item>
     </style>
+
+
+    <style name="Theme.App.MyButton" parent="">
+
+        <item name="cornerFamily">cut</item>
+        <item name="cornerSize">8dp</item>
+    </style>
+
 </resources>
