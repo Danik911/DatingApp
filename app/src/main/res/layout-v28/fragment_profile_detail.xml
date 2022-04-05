@@ -60,6 +60,7 @@
             android:text="35 Years"
             android:textColor="@color/white"
             android:textSize="35sp"
+            android:textFontWeight="200"
             app:layout_constraintBottom_toBottomOf="@+id/transparent_view"
             app:layout_constraintEnd_toStartOf="@+id/edit_imageView"
             app:layout_constraintStart_toEndOf="@+id/name_detail_textView"
