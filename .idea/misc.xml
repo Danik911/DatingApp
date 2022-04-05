@@ -3,15 +3,23 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/bottom_nav_chats_selector.xml" value="0.2335" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/bottom_nav_icon_selector.xml" value="0.1195" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/bottom_nav_profile_selector.xml" value="0.2335" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/bottom_nav_questions_selector.xml" value="0.2335" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/custom_button.xml" value="0.194" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/ic_edit.xml" value="0.363" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/drawable/ic_tests.xml" value="0.1" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/font/jacques_francois.xml" value="0.3958333333333333" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/font/roboto.xml" value="0.2574074074074074" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/font/roboto_light.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/font/roboto_medium.xml" value="0.2074074074074074" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/font/roboto_regular.xml" value="0.13518518518518519" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout-v28/fragment_profile_detail.xml" value="0.365625" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/activity_main.xml" value="0.18489583333333334" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/custom_dialog.xml" value="0.33" />
-        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/fragment_profile.xml" value="0.21" />
-        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/fragment_profile_detail.xml" value="0.2777777777777778" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/fragment_profile.xml" value="0.33" />
+        <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/fragment_profile_detail.xml" value="0.25" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/layout/fragment_questions.xml" value="0.30978260869565216" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/menu/bottom_navigation.xml" value="0.3619791666666667" />
         <entry key="..\:/Users/Daniil/Downloads/DatingApp/app/src/main/res/xml/fileprovider.xml" value="0.22916666666666666" />

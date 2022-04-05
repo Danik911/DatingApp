@@ -10,8 +10,6 @@
     <color name="light_gray">#FFEDEDED</color>
     <color name="body_text_color">#FF3F3F3F</color>
     <color name="interests_text_color">#FF010204</color>
-    <color name="item_color_inactive">#FF757575</color>`
-    <color name="bottom_nav_item_color">#FF000000</color>`
-    <color name="item_color_active">#FF9C1DB1</color>`
+
 
 </resources>

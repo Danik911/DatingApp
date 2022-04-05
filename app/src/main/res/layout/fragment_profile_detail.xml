@@ -45,18 +45,18 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginStart="18dp"
-            android:text="Ivan Petrov"
+            android:text="Ivan"
             android:textColor="@color/white"
             android:textSize="35sp"
-            android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="@+id/profile_imageView"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="@+id/transparent_view" />
 
-        <TextView
+        <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/years_textView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto_light"
             android:text="35 Years"
             android:textColor="@color/white"
             android:textSize="35sp"
@@ -70,7 +70,7 @@
             android:id="@+id/edit_imageView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="@dimen/margin_medium"
+            android:layout_marginEnd="26dp"
             android:src="@drawable/ic_edit"
             app:layout_constraintBottom_toBottomOf="@+id/profile_imageView"
             app:layout_constraintEnd_toEndOf="parent"
@@ -109,11 +109,11 @@
 
                 <TextView
                     android:id="@+id/about_me_TextView"
-                    style="@style/TextAppearance.Body"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_marginBottom="16dp"
                     android:background="@color/white"
+                    android:fontFamily="@font/roboto"
                     android:paddingStart="20dp"
                     android:paddingTop="10dp"
                     android:paddingEnd="20dp"
@@ -204,16 +204,17 @@
 
         </ScrollView>
 
-        <Button
+        <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/edit_button"
-            style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
-            android:layout_marginStart="24dp"
-            android:layout_marginEnd="24dp"
-            android:layout_marginBottom="@dimen/margin_medium"
+            android:layout_marginStart="60dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="22dp"
+            android:layout_marginTop="12dp"
             android:background="@drawable/custom_button"
             android:text="Edit"
+            android:textColor="@color/white"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

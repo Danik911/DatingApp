@@ -16,6 +16,5 @@
         <item name="fontFamily">@font/roboto</item>
         <item name="android:fontFamily">@font/roboto</item>
 
-        <item name="bottomNavigationStyle">@style/BottomNavigationViewStyle</item>
     </style>
 </resources>
