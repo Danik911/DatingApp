@@ -17,4 +17,16 @@
     <string name="diet_title">диета:</string>
     <string name="diet_body">вегетарианец</string>
     <string name="edit_button">Дополнить анкету</string>
+
+    <plurals name="years_plural">
+        <item quantity="one">%d год</item>
+        <item quantity="two">%d года</item>
+        <item quantity="many">%d лет</item>
+        <item quantity="other">%d года</item>
+    </plurals>
+
 </resources>
+
+
+
+

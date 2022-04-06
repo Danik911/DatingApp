@@ -17,7 +17,7 @@ class ProfileDetailFragment : Fragment() {
     private var _binding: FragmentProfileDetailBinding? = null
     private val binding get() = _binding!!
 
-    private var years: Int? = 33
+    private var years: Int = 32
 
 
     override fun onCreateView(
@@ -29,7 +29,11 @@ class ProfileDetailFragment : Fragment() {
 
         _binding = FragmentProfileDetailBinding.inflate(layoutInflater, container, false)
 
-        binding.yearsTextView.text = getString(R.string.years, years)
+        binding.yearsTextView.text = resources.getQuantityString(
+            R.plurals.years_plural,
+            years,
+            years
+        )
 
 
             return binding.root
