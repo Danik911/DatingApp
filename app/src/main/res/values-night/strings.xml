@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="sport_body">tennis, football, volleyball, swimming, golf, climbing</string>
+    <string name="diet_title">Diet</string>
+    <string name="diet_body">Vegetarian</string>
+    <string name="edit_button">Edit</string>
+</resources>

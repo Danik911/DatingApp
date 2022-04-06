@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">DatingApp</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="about_me">About me:</string>
+    <string name="about_me_text">Ernesto comes from an educated family. His father is a school principal and his mother is also a teacher. He is punctual, well-educated, and has good manners. He is really hard working. He always does his homework. He is also well-dressed and well-behaved. All teachers have a high opinion of him. Ernesto has a well-built body. He is gentle but fearless. He takes part in all sports, scout, trekking and mountaineering activities. He has a good heart. He is truthful, honest and obedient.</string>
+    <string name="my_interests_text">My hobby is reading. I like to read books in my free time. I like funny stories, fairy tales, and poems for children. I like to read fairy tales very much. My favourite fairy tale is by Hans Christian Andersen. I have read it several times. Gerda is my favourite fairy-tale character. I usually read in the evening before sleep. I also like to read in a garden or in a park, sitting on a bench. Recently I began to read short stories in English. It is difficult for me to read in English. But I want to learn English, and I want to read books in English.</string>
+    <string name="tests">Tests</string>
+    <string name="chats">Chats</string>
+    <string name="profile">Profile</string>
+    <string name="sport_title">Sport</string>
+    <string name="sport_body">tennis, football, volleyball, swimming, golf, climbing</string>
+    <string name="diet_title">Diet</string>
+    <string name="diet_body">Vegetarian</string>
+    <string name="edit_button">Edit</string>
+    <string name="name">Ivan</string>
+    <string name="years">%1$d Years</string>
+    <string name="star_sign">Star sign</string>
+    <string name="gemini">Gemini</string>
+</resources>
