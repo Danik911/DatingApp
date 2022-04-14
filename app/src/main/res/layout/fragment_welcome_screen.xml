@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/welcome_screen"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/welcome_background_color"
+        tools:context=".ui.screens.welcomescreen.WelcomeScreen">
+
+        <LinearLayout
+            android:id="@+id/linearLayout"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="30dp"
+            android:layout_marginEnd="30dp"
+            android:background="@drawable/welcome_background"
+            android:gravity="center"
+            android:orientation="vertical"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginTop="85dp"
+                android:layout_marginEnd="42dp"
+                android:gravity="center"
+                android:text="@string/welcome_text_view"
+                android:textColor="@color/interests_text_color"
+                android:textSize="30sp"
+                android:textStyle="bold">
+
+            </TextView>
+
+            <View
+                android:layout_width="98dp"
+                android:layout_height="1dp"
+                android:layout_marginTop="60dp"
+                android:layout_marginBottom="70dp"
+                android:background="@color/gray" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="42dp"
+                android:layout_marginEnd="42dp"
+                android:layout_marginBottom="90dp"
+                android:gravity="center"
+                android:text="@string/you_launched_app_text_view"
+                android:textColor="@color/interests_text_color"
+                android:textSize="20sp">
+
+            </TextView>
+
+
+        </LinearLayout>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:id="@+id/edit_button"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginTop="116dp"
+            android:layout_marginEnd="60dp"
+            android:layout_marginBottom="82dp"
+            android:background="@drawable/custom_button"
+            android:text="@string/next_button_text"
+            android:textAlignment="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/linearLayout" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>

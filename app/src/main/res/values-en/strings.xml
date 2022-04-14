@@ -18,6 +18,9 @@
     <string name="years">%1$d Years</string>
     <string name="star_sign">Star sign</string>
     <string name="gemini">Gemini</string>
+    <string name="welcome_text_view">Welcome !</string>
+    <string name="you_launched_app_text_view">Вы запустили приложение по выбору идеального партнера</string>
+    <string name="next_button_text">Далее</string>
 
     <plurals name="years_plural">
         <!--

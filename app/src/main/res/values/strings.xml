@@ -17,6 +17,9 @@
     <string name="diet_title">диета:</string>
     <string name="diet_body">вегетарианец</string>
     <string name="edit_button">Дополнить анкету</string>
+    <string name="welcome_text_view">Приветствуем \n вас!</string>
+    <string name="you_launched_app_text_view">Вы запустили \n приложение по выбору \n идеального партнера</string>
+    <string name="next_button_text">Далее</string>
 
     <plurals name="years_plural">
         <item quantity="one">%d год</item>

@@ -11,6 +11,7 @@
     <color name="body_text_color">#FF3F3F3F</color>
     <color name="interests_text_color">#FF010204</color>
     <color name="transparent_color">#00000000</color>
+    <color name="welcome_background_color">#FFD9D6DC</color>
 
 
 </resources>

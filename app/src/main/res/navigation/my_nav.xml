@@ -3,7 +3,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/my_nav"
-    app:startDestination="@id/questionsFragment">
+    app:startDestination="@id/welcomeScreen">
 
     <fragment
         android:id="@+id/questionsFragment"
@@ -21,4 +21,8 @@
         android:id="@+id/profileDetailFragment"
         android:name="com.example.datingapp.ui.screens.profiledetailscreen.ProfileDetailFragment"
         android:label="ProfileDetailFragment" />
+    <fragment
+        android:id="@+id/welcomeScreen"
+        android:name="com.example.datingapp.ui.screens.welcomescreen.WelcomeScreen"
+        android:label="WelcomeScreen" />
 </navigation>
